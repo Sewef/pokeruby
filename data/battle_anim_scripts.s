@@ -9629,7 +9629,7 @@ Move_SKY_UPPERCUT: @ 81D53ED
 	end
 
 Move_SECRET_POWER: @ 81D54E6
-	createvisualtask sub_80E4008, 5
+	createvisualtask AnimTask_GetBattleTerrain, 5
 	jumpargeq 0, 0, Move_NEEDLE_ARM
 	jumpargeq 0, 1, Move_MAGICAL_LEAF
 	jumpargeq 0, 2, Move_MUD_SHOT
@@ -10453,32 +10453,32 @@ General_SmokeballEscape: @ 81D6690
 	setalpha 12, 4
 	delay 0
 	playsewithpan SE_BOWA2, SOUND_PAN_TARGET
-	createsprite gBattleAnimSpriteTemplate_8402894, 128, 0, 32, 28, 30
+	createsprite gPinkSmokeTemplate, 128, 0, 32, 28, 30
 	delay 4
 	playsewithpan SE_BOWA2, SOUND_PAN_TARGET
-	createsprite gBattleAnimSpriteTemplate_8402894, 127, 2, 12, 20, 30
+	createsprite gPinkSmokeTemplate, 127, 2, 12, 20, 30
 	delay 12
 	playsewithpan SE_BOWA2, SOUND_PAN_TARGET
-	createsprite gBattleAnimSpriteTemplate_8402894, 126, 2, -28, 4, 30
+	createsprite gPinkSmokeTemplate, 126, 2, -28, 4, 30
 	delay 4
 	delay 8
 	playsewithpan SE_BOWA2, SOUND_PAN_TARGET
-	createsprite gBattleAnimSpriteTemplate_8402894, 124, 2, 14, -20, 30
+	createsprite gPinkSmokeTemplate, 124, 2, 14, -20, 30
 	delay 4
 	playsewithpan SE_BOWA2, SOUND_PAN_TARGET
 	createvisualtask sub_80DFC24, 2, 2
-	createsprite gBattleAnimSpriteTemplate_8402894, 123, 3, 4, 4, 30
+	createsprite gPinkSmokeTemplate, 123, 3, 4, 4, 30
 	delay 14
 	playsewithpan SE_BOWA2, SOUND_PAN_TARGET
-	createsprite gBattleAnimSpriteTemplate_8402894, 122, 3, -14, 18, 46
+	createsprite gPinkSmokeTemplate, 122, 3, -14, 18, 46
 	delay 0
-	createsprite gBattleAnimSpriteTemplate_8402894, 121, 3, 14, -14, 46
+	createsprite gPinkSmokeTemplate, 121, 3, 14, -14, 46
 	delay 0
-	createsprite gBattleAnimSpriteTemplate_8402894, 120, 3, -12, -10, 46
+	createsprite gPinkSmokeTemplate, 120, 3, -12, -10, 46
 	delay 0
-	createsprite gBattleAnimSpriteTemplate_8402894, 119, 3, 14, 14, 46
+	createsprite gPinkSmokeTemplate, 119, 3, 14, 14, 46
 	delay 0
-	createsprite gBattleAnimSpriteTemplate_8402894, 118, 3, 0, 0, 46
+	createsprite gPinkSmokeTemplate, 118, 3, 0, 0, 46
 	waitforvisualfinish
 	clearmonbg ANIM_BANK_ATTACKER
 	invisible ANIM_BANK_ATTACKER
