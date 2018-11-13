@@ -6227,8 +6227,8 @@ static void TurnValuesCleanUp(bool8 var0)
         if (gDisableStructs[gActiveBattler].substituteHP == 0)
                 gBattleMons[gActiveBattler].status2 &= ~(STATUS2_SUBSTITUTE);
 			
-        if (gDisableStructs[gActiveBattler].status3 & STATUS3_ROOST)
-                gBattleMons[gActiveBattler].status3 &= ~(STATUS3_ROOST);
+        if (gStatuses3[gActiveBattler] & STATUS3_ROOST)
+                gStatuses3[gActiveBattler] &= ~(STATUS3_ROOST);
     }
 
     gSideTimers[0].followmeTimer = 0;
