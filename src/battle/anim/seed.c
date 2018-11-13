@@ -49,6 +49,8 @@ const struct SpriteTemplate gLeechSeedSpriteTemplate =
 // arg 3: target y pixel offset
 // arg 4: duration
 // arg 5: wave amplitude
+
+// arg 6: CUSTOM - disable Sprouts animation
 void AnimLeechSeed(struct Sprite* sprite)
 {
     InitAnimSpritePos(sprite, 1);
