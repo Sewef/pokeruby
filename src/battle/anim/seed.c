@@ -72,7 +72,8 @@ static void AnimLeechSeedStep(struct Sprite* sprite)
         sprite->invisible = 1;
         sprite->data[0] = 10;
         sprite->callback = WaitAnimForDuration;
-        StoreSpriteCallbackInData(sprite, AnimLeechSeedSprouts);
+        if (gBattleAnimArgs[6] == 0)
+            StoreSpriteCallbackInData(sprite, AnimLeechSeedSprouts);
     }
 }
 
