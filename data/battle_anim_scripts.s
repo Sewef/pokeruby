@@ -905,13 +905,13 @@ Move_FIRE_BLAST_CreateFireCross:
 Move_LEECH_SEED: @ 81C8483
 	loadspritegfx ANIM_TAG_SEED
 	playsewithpan SE_W077, SOUND_PAN_ATTACKER
-	createsprite gLeechSeedSpriteTemplate, 130, 15, 0, 0, 24, 35, -32
+	createsprite gLeechSeedSpriteTemplate, 130, 15, 0, 0, 24, 35, -32, 0
 	delay 8
 	playsewithpan SE_W077, SOUND_PAN_ATTACKER
-	createsprite gLeechSeedSpriteTemplate, 130, 15, 0, -16, 24, 35, -40
+	createsprite gLeechSeedSpriteTemplate, 130, 15, 0, -16, 24, 35, -40, 0
 	delay 8
 	playsewithpan SE_W077, SOUND_PAN_ATTACKER
-	createsprite gLeechSeedSpriteTemplate, 130, 15, 0, 16, 24, 35, -37
+	createsprite gLeechSeedSpriteTemplate, 130, 15, 0, 16, 24, 35, -37, 0
 	delay 12
 	loopsewithpan SE_W039, SOUND_PAN_TARGET, 10, 8
 	waitforvisualfinish
