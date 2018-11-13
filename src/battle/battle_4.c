@@ -1569,6 +1569,14 @@ static void atk06_typecalc(void)
                     i += 3;
                     continue;
                 }
+				
+				// battle port: if defensive type = FLYING and if Roost'd, skip type
+                if ((gTypeEffectiveness[i + 1] == TYPE_FLYING) && (gBattleMons[gBankTarget].status3 & STATUS3_ROOST))
+                {
+                    i += 3;
+                    continue;
+                }
+				
 
                 else if (gTypeEffectiveness[i] == move_type)
                 {
