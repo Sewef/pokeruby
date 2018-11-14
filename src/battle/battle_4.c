@@ -602,9 +602,6 @@ static void atkF5_removeattackerstatus1(void);
 static void atkF6_finishaction(void);
 static void atkF7_finishturn(void);
 
-//CUSTOM GEN4 PORT
-static void atkF8_jumpifmovetype(void);
-
 void (* const gBattleScriptingCommandsTable[])(void) =
 {
     atk00_attackcanceler,
@@ -855,8 +852,6 @@ void (* const gBattleScriptingCommandsTable[])(void) =
     atkF5_removeattackerstatus1,
     atkF6_finishaction,
     atkF7_finishturn,
-    //CUSTOM GEN4 PORT
-    atkF8_jumpifmovetype,
 };
 
 struct StatFractions
@@ -15951,17 +15946,4 @@ static void atkF7_finishturn(void)
 {
     gCurrentActionFuncId = 0xC;
     gCurrentTurnActionNumber = gBattlersCount;
-}
-
-//CUSTOM GEN4 PORT
-static void atkF8_jumpifmovetype(void)
-{
-	int i;
-	u8* type_check = T1_READ_PTR(gBattlescriptCurrInstr + 1);
-	u8* jump_loc = T1_READ_PTR(gBattlescriptCurrInstr + 2);	
-	
-	for (i = 0; i < 18; i++)
-		if (i == type_check)
-			gBattlescriptCurrInstr = jump_loc;
-	}
 }
