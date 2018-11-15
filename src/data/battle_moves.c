@@ -3067,7 +3067,7 @@ const struct BattleMove gBattleMoves[] = {
 
     [MOVE_SPIT_UP] = {
         .effect = EFFECT_SPIT_UP,
-        .power = 100,
+        .power = 0,
         .type = TYPE_NORMAL,
         .accuracy = 100,
         .pp = 10,
