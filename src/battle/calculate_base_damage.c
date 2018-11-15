@@ -221,7 +221,8 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     if (gBattleMoves[gCurrentMove].effect == EFFECT_EXPLOSION)
         defense /= 2;
 
-    if (TYPE_IS_PHYSICAL(type)) // type < TYPE_MYSTERY
+    if (gBattleMoves[gCurrentMove].flags & F_MOVE_IS_SPECIAL == 0)
+    //if (TYPE_IS_PHYSICAL(type)) // type < TYPE_MYSTERY
     {
         if (gCritMultiplier == 2)
         {
@@ -271,7 +272,8 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     if (type == TYPE_MYSTERY)
         damage = 0; // is ??? type. does 0 damage.
 
-    if (TYPE_IS_SPECIAL(type)) // type > TYPE_MYSTERY
+    if (gBattleMoves[gCurrentMove].flags & F_MOVE_IS_SPECIAL == 1)
+    //if (TYPE_IS_SPECIAL(type)) // type > TYPE_MYSTERY
     {
         if (gCritMultiplier == 2)
         {
