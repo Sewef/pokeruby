@@ -11457,7 +11457,7 @@ static void atk86_stockpiletobasedamage(void)
         if (gBattleCommunication[6] != 1)
         {
             gBattleMoveDamage = CalculateBaseDamage(&gBattleMons[gBankAttacker], &gBattleMons[gBankTarget], gCurrentMove,
-                                                    gSideAffecting[GetBattlerPosition(gBankTarget) & 1], 0,
+                                                    gSideAffecting[GetBattlerPosition(gBankTarget) & 1], 100,
                                                     0, gBankAttacker, gBankTarget)
                                 * gDisableStructs[gBankAttacker].stockpileCounter;
             gBattleStruct->animTurn = gDisableStructs[gBankAttacker].stockpileCounter;
