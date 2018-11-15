@@ -3341,7 +3341,6 @@ BattleScript_BideStoringEnergy:: @ 81D90A7
 BattleScript_BideAttack:: @ 81D90B2
 	printstring BATTLE_TEXT_UnleashedEnergy
 	waitmessage 64
-	accuracycheck BattleScript_MoveMissed, ACC_CURR_MOVE
 	typecalc
 	bicbyte gMoveResultFlags, MOVE_RESULT_SUPER_EFFECTIVE | MOVE_RESULT_NOT_VERY_EFFECTIVE
 	copyword gBattleMoveDamage, sBIDE_DMG
