@@ -3199,7 +3199,7 @@ BattleScript_LevelUp:: @ 81D8EF3
 	printstring BATTLE_TEXT_GrewLevel 
 	setbyte sLVLBOX_STATE, 0
 	drawlvlupbox
-	handlelearnnewmove BattleScript_LearnedNewMove, BattleScript_LearnMovereturn, 1
+	handlelearnnewmove BattleScript_LearnedNewMove, BattleScript_LearnMoveReturn, 1
 	goto BattleScript_AskToLearnMove
 
 BattleScript_TryLearnMoveLoop: @ 81D8F0F
