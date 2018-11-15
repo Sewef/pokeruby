@@ -1348,7 +1348,6 @@ BattleScript_EffectLockOn: @ 81D7AFF
 	attackstring
 	ppreduce
 	jumpifstatus2 TARGET, STATUS2_SUBSTITUTE, BattleScript_ButItFailed
-	accuracycheck BattleScript_ButItFailed, ACC_CURR_MOVE
 	setalwayshitflag
 	attackanimation
 	waitanimation
@@ -1627,7 +1626,6 @@ BattleScript_EffectSpikes: @ 81D7E10
 
 BattleScript_EffectForesight: @ 81D7E25
 	attackcanceler
-	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
 	attackstring
 	ppreduce
 	setforesight
