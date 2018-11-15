@@ -1214,7 +1214,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_MOVE_IS_STATUS | ,
+        .flags = F_MOVE_IS_STATUS,
     },
 
     [MOVE_NIGHT_SHADE] = {
@@ -1430,7 +1430,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SPECIAL,
         .priority = 0,
-        .flags = F_MOVE_IS_STATUS | ,
+        .flags = F_MOVE_IS_STATUS,
     },
 
     [MOVE_MIRROR_MOVE] = {
@@ -1442,7 +1442,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SPECIAL,
         .priority = 0,
-        .flags = F_MOVE_IS_STATUS | ,
+        .flags = F_MOVE_IS_STATUS,
     },
 
     [MOVE_SELF_DESTRUCT] = {
@@ -1742,7 +1742,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MOVE_IS_STATUS | ,
+        .flags = F_MOVE_IS_STATUS,
     },
 
     [MOVE_BUBBLE] = {
@@ -1814,7 +1814,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_MOVE_IS_STATUS | ,
+        .flags = F_MOVE_IS_STATUS,
     },
 
     [MOVE_ACID_ARMOR] = {
@@ -1934,7 +1934,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_MOVE_IS_STATUS | ,
+        .flags = F_MOVE_IS_STATUS,
     },
 
     [MOVE_TRI_ATTACK] = {
@@ -2006,7 +2006,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MOVE_IS_STATUS | ,
+        .flags = F_MOVE_IS_STATUS,
     },
 
     [MOVE_TRIPLE_KICK] = {
@@ -2102,7 +2102,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MOVE_IS_STATUS | ,
+        .flags = F_MOVE_IS_STATUS,
     },
 
     [MOVE_FLAIL] = {
@@ -2126,7 +2126,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_MOVE_IS_STATUS | ,
+        .flags = F_MOVE_IS_STATUS,
     },
 
     [MOVE_AEROBLAST] = {
@@ -2198,7 +2198,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 3,
-        .flags = F_MOVE_IS_STATUS | ,
+        .flags = F_MOVE_IS_STATUS,
     },
 
     [MOVE_MACH_PUNCH] = {
@@ -2306,7 +2306,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_ENEMY_SIDE,
         .priority = 0,
-        .flags = F_MOVE_IS_STATUS | ,
+        .flags = F_MOVE_IS_STATUS,
     },
 
     [MOVE_ZAP_CANNON] = {
@@ -2342,7 +2342,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_MOVE_IS_STATUS | ,
+        .flags = F_MOVE_IS_STATUS,
     },
 
     [MOVE_PERISH_SONG] = {
@@ -2354,7 +2354,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_MOVE_IS_STATUS | ,
+        .flags = F_MOVE_IS_STATUS,
     },
 
     [MOVE_ICY_WIND] = {
@@ -2378,7 +2378,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 3,
-        .flags = F_MOVE_IS_STATUS | ,
+        .flags = F_MOVE_IS_STATUS,
     },
 
     [MOVE_BONE_RUSH] = {
@@ -2426,7 +2426,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_MOVE_IS_STATUS | ,
+        .flags = F_MOVE_IS_STATUS,
     },
 
     [MOVE_GIGA_DRAIN] = {
@@ -2450,7 +2450,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 3,
-        .flags = F_MOVE_IS_STATUS | ,
+        .flags = F_MOVE_IS_STATUS,
     },
 
     [MOVE_CHARM] = {
@@ -2582,7 +2582,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SPECIAL,
         .priority = 0,
-        .flags = F_MOVE_IS_STATUS | ,
+        .flags = F_MOVE_IS_STATUS,
     },
 
     [MOVE_HEAL_BELL] = {
@@ -2726,7 +2726,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_MOVE_IS_STATUS | ,
+        .flags = F_MOVE_IS_STATUS,
     },
 
     [MOVE_ENCORE] = {
@@ -2894,7 +2894,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_MOVE_IS_STATUS | ,
+        .flags = F_MOVE_IS_STATUS,
     },
 
     [MOVE_SUNNY_DAY] = {
@@ -2906,7 +2906,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_MOVE_IS_STATUS | ,
+        .flags = F_MOVE_IS_STATUS,
     },
 
     [MOVE_CRUNCH] = {
@@ -2930,7 +2930,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SPECIAL,
         .priority = -5,
-        .flags = F_MOVE_IS_SPECIAL | ,
+        .flags = F_MOVE_IS_SPECIAL,
     },
 
     [MOVE_PSYCH_UP] = {
@@ -2990,7 +2990,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MOVE_IS_SPECIAL | ,
+        .flags = F_MOVE_IS_SPECIAL,
     },
 
     [MOVE_ROCK_SMASH] = {
@@ -3206,7 +3206,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 3,
-        .flags = F_MOVE_IS_STATUS | ,
+        .flags = F_MOVE_IS_STATUS,
     },
 
     [MOVE_NATURE_POWER] = {
@@ -3218,7 +3218,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SPECIAL,
         .priority = 0,
-        .flags = F_MOVE_IS_STATUS | ,
+        .flags = F_MOVE_IS_STATUS,
     },
 
     [MOVE_CHARGE] = {
@@ -3254,7 +3254,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 5,
-        .flags = F_MOVE_IS_STATUS | ,
+        .flags = F_MOVE_IS_STATUS,
     },
 
     [MOVE_TRICK] = {
@@ -3278,7 +3278,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MOVE_IS_STATUS | ,
+        .flags = F_MOVE_IS_STATUS,
     },
 
     [MOVE_WISH] = {
@@ -3302,7 +3302,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SPECIAL,
         .priority = 0,
-        .flags = F_MOVE_IS_STATUS | ,
+        .flags = F_MOVE_IS_STATUS,
     },
 
     [MOVE_INGRAIN] = {
@@ -3338,7 +3338,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SPECIAL,
         .priority = 4,
-        .flags = F_MOVE_IS_STATUS | ,
+        .flags = F_MOVE_IS_STATUS,
     },
 
     [MOVE_RECYCLE] = {
@@ -3350,7 +3350,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_MOVE_IS_STATUS | ,
+        .flags = F_MOVE_IS_STATUS,
     },
 
     [MOVE_REVENGE] = {
@@ -3614,7 +3614,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_MOVE_IS_STATUS | ,
+        .flags = F_MOVE_IS_STATUS,
     },
 
     [MOVE_ICE_BALL] = {
@@ -4166,7 +4166,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_MOVE_IS_STATUS | ,
+        .flags = F_MOVE_IS_STATUS,
     },
 
     [MOVE_CALM_MIND] = {
@@ -4250,7 +4250,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MOVE_IS_SPECIAL | ,
+        .flags = F_MOVE_IS_SPECIAL,
     },
 
     [MOVE_PSYCHO_BOOST] = {
