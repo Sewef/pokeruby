@@ -207,7 +207,6 @@
 #define F_AFFECTED_BY_KINGS_ROCK  (1 << 5)
 
 //Gen4 Split
-#define F_MOVE_IS_PHYSICAL  (0 << 6)
 #define F_MOVE_IS_SPECIAL   (1 << 6)
 #define F_MOVE_IS_STATUS    (1 << 7)
 
