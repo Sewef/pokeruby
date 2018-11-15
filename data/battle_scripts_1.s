@@ -953,7 +953,7 @@ BattleScript_EffectRecoil: @ 81D76A6
 	setmoveeffect EFFECT_RECOIL_25 | AFFECTS_USER | CERTAIN
 	jumpifnotmove MOVE_STRUGGLE, BattleScript_EffectHit
 	incrementgamestat 27
-	goto BattleScript_EffectHit
+	goto BattleScript_EffectAlwaysHit
 
 BattleScript_EffectConfuse: @ 81D76BF
 	attackcanceler
@@ -2671,8 +2671,14 @@ BattleScript_EffectSecretPower: @ 81D8918
 	goto BattleScript_EffectHit
 
 BattleScript_EffectDoubleEdge: @ 81D891E
+	jumpifhalfword EQUAL, gChosenMove, MOVE_VOLT_TACKLE, VoltTackleEffect
 	setmoveeffect EFFECT_RECOIL_33_PARALYSIS | AFFECTS_USER | CERTAIN
 	goto BattleScript_EffectHit
+	
+VoltTackleEffect:
+	setmoveeffect EFFECT_PARALYSIS
+	seteffectwithchance
+	return
 
 BattleScript_EffectTeeterDance: @ 81D8929
 	attackcanceler
@@ -3193,7 +3199,7 @@ BattleScript_LevelUp:: @ 81D8EF3
 	printstring BATTLE_TEXT_GrewLevel 
 	setbyte sLVLBOX_STATE, 0
 	drawlvlupbox
-	handlelearnnewmove BattleScript_LearnedNewMove, BattleScript_LearnMoveReturn, 1
+	handlelearnnewmove BattleScript_LearnedNewMove, BattleScript_LearnMovereturn, 1
 	goto BattleScript_AskToLearnMove
 
 BattleScript_TryLearnMoveLoop: @ 81D8F0F
