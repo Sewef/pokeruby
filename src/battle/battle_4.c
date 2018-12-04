@@ -602,6 +602,9 @@ static void atkF5_removeattackerstatus1(void);
 static void atkF6_finishaction(void);
 static void atkF7_finishturn(void);
 
+// CUSTOM
+static void atkF8_setstatus3(void);
+
 void (* const gBattleScriptingCommandsTable[])(void) =
 {
     atk00_attackcanceler,
@@ -852,6 +855,7 @@ void (* const gBattleScriptingCommandsTable[])(void) =
     atkF5_removeattackerstatus1,
     atkF6_finishaction,
     atkF7_finishturn,
+	atkF8_setstatus3,
 };
 
 struct StatFractions
@@ -15948,4 +15952,16 @@ static void atkF7_finishturn(void)
 {
     gCurrentActionFuncId = 0xC;
     gCurrentTurnActionNumber = gBattlersCount;
+}
+
+
+// SET STATUS 3
+
+static void atkF8_setstatus3(void)
+{
+	u8* target = T1_READ_PTR(gBattlescriptCurrInstr + 1);
+	u8* status = T1_READ_PTR(gBattlescriptCurrInstr + 2);
+	
+	gStatuses3[target] |= status;
+	gBattlescriptCurrInstr += 3;
 }
