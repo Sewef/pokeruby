@@ -728,6 +728,7 @@ BattleScript_EffectRestoreHp: @ 81D73D1
 	attackstring
 	ppreduce
 	tryhealhalfhealth BattleScript_AlreadyAtFullHp, 1
+	jumpifhalfword EQUAL, gCurrentMove, MOVE_ROOST, RoostEffect
 	attackanimation
 	waitanimation
 	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
@@ -736,6 +737,10 @@ BattleScript_EffectRestoreHp: @ 81D73D1
 	printstring BATTLE_TEXT_RegainedHealth
 	waitmessage 64
 	goto BattleScript_MoveEnd
+	
+RoostEffect:
+	setstatus3 USER, STATUS3_ROOST
+	return
 
 BattleScript_EffectToxic: @ 81D73F4
 	attackcanceler
