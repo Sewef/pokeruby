@@ -398,8 +398,9 @@
 #define MOVE_IRON_HEAD 380
 #define MOVE_ZEN_HEADBUTT 381
 
+//ROOST
+#define MOVE_ROOST 382
 
-
-#define NUM_MOVES 382
+#define NUM_MOVES 383
 
 #endif  // GUARD_CONSTANTS_MOVES_H
