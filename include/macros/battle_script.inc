@@ -1222,7 +1222,7 @@
 	.byte 0xf7
 	.endm
 	
-	.macro setmultihit target status
+	.macro setmultihit target, status
 	.byte 0xf9
 	.byte \target
 	.byte \status
