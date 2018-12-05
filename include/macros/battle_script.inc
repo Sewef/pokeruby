@@ -1221,9 +1221,15 @@
 	.macro finishturn
 	.byte 0xf7
 	.endm
-
+	
+	.macro setmultihit bank flag
+	.byte 0xf9
+	.byte \bank
+	.byte \flag
+	.endm
+	
 	.macro trainerslideout bank
-	.byte 0xf8
+	.byte 0xf9
 	.byte \bank
 	.endm
 
