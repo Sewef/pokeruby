@@ -399,4 +399,9 @@ const u8 gMoveNames[][13] = {
 	
 	//ROOST
 	[MOVE_ROOST] = _("ROOST"),
+	
+	//FANGS
+	[MOVE_THUNDER_FANG] = _("THUNDER FANG"),
+	[MOVE_FIRE_FANG] = _("FIRE FANG"),
+	[MOVE_ICE_FANG] = _("ICE FANG"),
 };
