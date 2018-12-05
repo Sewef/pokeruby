@@ -409,6 +409,10 @@ gBattleAnims_Moves:: @ 81C7168
 	
 	.4byte Move_ROOST
 	
+	.4byte Move_THUNDER_FANG
+	.4byte Move_FIRE_FANG
+	.4byte Move_FROST_FANG
+	
 	.4byte PoundCopy
 
 	.align 2
@@ -10275,6 +10279,10 @@ Move_IRON_HEAD:
 Move_ZEN_HEADBUTT:
 
 Move_ROOST:
+
+Move_THUNDER_FANG:
+Move_FIRE_FANG:
+Move_FROST_FANG:
 
 Move_KNOCK_OFF: @ 81D523B
 	loadspritegfx ANIM_TAG_SLAM_HIT_2
