@@ -723,14 +723,14 @@ BattleScript_EffectFlinchHit: @ 81D73C6
 	seteffect EFFECT_FLINCH
 	jumpifhalfword EQUAL, gCurrentMove, MOVE_THUNDER_FANG, ElementalFang
 	jumpifhalfword EQUAL, gCurrentMove, MOVE_FIRE_FANG, ElementalFang
-	jumpifhalfword EQUAL, gCurrentMove, MOVE_FROST_FANG, ElementalFang
+	jumpifhalfword EQUAL, gCurrentMove, MOVE_ICE_FANG, ElementalFang
 	goto BattleScript_EffectHit
 	
 ElementalFang:
 	seteffectwithchance
 	jumpifhalfword EQUAL, gCurrentMove, MOVE_THUNDER_FANG, BattleScript_EffectParalyzeHit
 	jumpifhalfword EQUAL, gCurrentMove, MOVE_FIRE_FANG, BattleScript_EffectBurnHit
-	jumpifhalfword EQUAL, gCurrentMove, MOVE_FROST_FANG, BattleScript_EffectFreezeHit
+	jumpifhalfword EQUAL, gCurrentMove, MOVE_ICE_FANG, BattleScript_EffectFreezeHit
 
 BattleScript_EffectRestoreHp: @ 81D73D1
 	attackcanceler
