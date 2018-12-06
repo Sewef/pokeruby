@@ -10281,6 +10281,8 @@ Move_ZEN_HEADBUTT:
 
 Move_ROOST:
 	loadspritegfx ANIM_TAG_WHITE_FEATHER
+	loadspritegfx ANIM_TAG_ORBS
+	loadspritegfx ANIM_TAG_BLUE_STAR
 	monbg ANIM_BANK_DEF_PARTNER
 	monbgprio_29
 	playsewithpan SE_W080, SOUND_PAN_TARGET
@@ -10297,7 +10299,13 @@ Move_ROOST:
 	createsprite gBattleAnimSpriteTemplate_83DA498, 128, 0, -16, 160, 2, 104, 11304, 32, 1
 	delay 6
 	createsprite gBattleAnimSpriteTemplate_83DA498, 128, 0, -16, 96, 2, 104, 11304, 32, 1
+	
+	delay 30
+	createvisualtask sub_80E1F8C, 2, 2, 0, 2, 0, 11, rgb(31, 31, 31)
+	delay 15
+	call Unknown_81D5EF5
 	waitforvisualfinish
+	
 	clearmonbg ANIM_BANK_DEF_PARTNER
 	end
 
