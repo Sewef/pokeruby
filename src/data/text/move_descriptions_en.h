@@ -1413,6 +1413,85 @@ static const u8 MoveDescription_DoomDesire[] = _(
 static const u8 MoveDescription_PsychoBoost[] = _(
     "Allows a full-power attack,\n"
     "but sharply lowers SP. ATK.");
+	//GEN 4
+
+	//EFFECT HIT
+static const u8 MoveDescription_AquaTail[] = _(
+	"Dummy");
+static const u8 MoveDescription_DragonPulse[] = _(
+	"Dummy");
+static const u8 MoveDescription_PowerGem[] = _(
+	"Dummy");
+static const u8 MoveDescription_PowerWhip[] = _(
+	"Dummy");
+static const u8 MoveDescription_SeedBomb[] = _(
+	"Dummy");
+static const u8 MoveDescription_XScissor[] = _(
+	"Dummy");
+
+	//EFFECT QUICKATTACK
+static const u8 MoveDescription_AquaJet[] = _(
+	"Dummy");
+static const u8 MoveDescription_BulletPunch[] = _(
+	"Dummy");
+static const u8 MoveDescription_IceShard[] = _(
+	"Dummy");
+static const u8 MoveDescription_ShadowSneak[] = _(
+	"Dummy");
+static const u8 MoveDescription_VacuumWave[] = _(
+	"Dummy");
+
+	//EFFECT HIGHCRITICAL
+static const u8 MoveDescription_Attackorder[] = _(
+	"Dummy");
+static const u8 MoveDescription_NightSlash[] = _(
+	"Dummy");
+static const u8 MoveDescription_PsychoCut[] = _(
+	"Dummy");
+static const u8 MoveDescription_ShadowClaw[] = _(
+	"Dummy");
+static const u8 MoveDescription_SpacialRend[] = _(
+	"Dummy");
+static const u8 MoveDescription_StoneEdge[] = _(
+	"Dummy");
+
+	//EFFECT OVERHEAT
+static const u8 MoveDescription_DracoMeteor[] = _(
+	"Dummy");
+static const u8 MoveDescription_LeafStorm[] = _(
+	"Dummy");
+
+	//EFFECT RECHARGE
+static const u8 MoveDescription_GigaImpact[] = _(
+	"Dummy");
+static const u8 MoveDescription_RoarOfTime[] = _(
+	"Dummy");
+static const u8 MoveDescription_RockWrecker[] = _(
+	"Dummy");
+
+	//EFFECT FLINCH
+static const u8 MoveDescription_AirSlash[] = _(
+	"Dummy");
+static const u8 MoveDescription_DarkPulse[] = _(
+	"Dummy");
+static const u8 MoveDescription_DragonRush[] = _(
+	"Dummy");
+static const u8 MoveDescription_IronHead[] = _(
+	"Dummy");
+static const u8 MoveDescription_ZenHeadbutt[] = _(
+	"Dummy");
+
+	//ROOST
+static const u8 	MoveDescription_Roost[] = _(
+	"Dummy");
+
+	//FANGS
+static const u8 	MoveDescription_ThunderFang[] = _(
+	"Dummy");
+static const u8 	MoveDescription_FireFang[] = _(
+	"Dummy");
+static const u8 	MoveDescription_IceFang[] = _(
+	"Dummy");
 
 const u8 * const gMoveDescriptions[] = {
     MoveDescription_Pound,
@@ -1769,4 +1848,53 @@ const u8 * const gMoveDescriptions[] = {
     MoveDescription_WaterPulse,
     MoveDescription_DoomDesire,
     MoveDescription_PsychoBoost,
+	
+	//GEN 4
+
+	//EFFECT HIT
+	MoveDescription_AquaTail,
+	MoveDescription_DragonPulse,
+	MoveDescription_PowerGem,
+	MoveDescription_PowerWhip,
+	MoveDescription_SeedBomb,
+	MoveDescription_XScissor,
+
+	//EFFECT QUICKATTACK
+	MoveDescription_AquaJet,
+	MoveDescription_BulletPunch,
+	MoveDescription_IceShard,
+	MoveDescription_ShadowSneak,
+	MoveDescription_VacuumWave,
+
+	//EFFECT HIGHCRITICAL
+	MoveDescription_Attackorder,
+	MoveDescription_NightSlash,
+	MoveDescription_PsychoCut,
+	MoveDescription_ShadowClaw,
+	MoveDescription_SpacialRend,
+	MoveDescription_StoneEdge,
+
+	//EFFECT OVERHEAT
+	MoveDescription_DracoMeteor,
+	MoveDescription_LeafStorm,
+
+	//EFFECT RECHARGE
+	MoveDescription_GigaImpact,
+	MoveDescription_RoarOfTime,
+	MoveDescription_RockWrecker,
+
+	//EFFECT FLINCH
+	MoveDescription_AirSlash,
+	MoveDescription_DarkPulse,
+	MoveDescription_DragonRush,
+	MoveDescription_IronHead,
+	MoveDescription_ZenHeadbutt,
+
+	//ROOST
+	MoveDescription_Roost,
+
+	//FANGS
+	MoveDescription_ThunderFang,
+	MoveDescription_FireFang,
+	MoveDescription_IceFang,
 };
