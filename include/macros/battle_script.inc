@@ -1222,10 +1222,10 @@
 	.byte 0xf7
 	.endm
 	
-	.macro setmultihit target, status
-	.byte 0xf9
+	.macro setstatus3 target, status
+	.byte 0xf8
 	.byte \target
-	.byte \status
+	.4byte \status
 	.endm
 	
 	.macro trainerslideout bank

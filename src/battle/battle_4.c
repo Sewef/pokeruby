@@ -15959,9 +15959,9 @@ static void atkF7_finishturn(void)
 
 static void atkF8_setstatus3(void)
 {
-	u8* target = T1_READ_PTR(gBattlescriptCurrInstr + 1);
-	u8* status = T1_READ_PTR(gBattlescriptCurrInstr + 2);
+	u8 target = GetBattleBank(T2_READ_8(gBattlescriptCurrInstr + 1));
+    u32 status = T2_READ_32(gBattlescriptCurrInstr + 2);
 	
 	gStatuses3[target] |= status;
-	gBattlescriptCurrInstr += 3;
+	gBattlescriptCurrInstr += 6;
 }

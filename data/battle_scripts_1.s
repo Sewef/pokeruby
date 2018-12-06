@@ -720,7 +720,7 @@ BattleScript_EffectConversion: @ 81D73B1
 	goto BattleScript_MoveEnd
 
 BattleScript_EffectFlinchHit: @ 81D73C6
-	seteffect EFFECT_FLINCH
+	setmoveeffect EFFECT_FLINCH
 	jumpifhalfword EQUAL, gCurrentMove, MOVE_THUNDER_FANG, ElementalFang
 	jumpifhalfword EQUAL, gCurrentMove, MOVE_FIRE_FANG, ElementalFang
 	jumpifhalfword EQUAL, gCurrentMove, MOVE_ICE_FANG, ElementalFang
@@ -737,7 +737,6 @@ BattleScript_EffectRestoreHp: @ 81D73D1
 	attackstring
 	ppreduce
 	tryhealhalfhealth BattleScript_AlreadyAtFullHp, 1
-	jumpifhalfword EQUAL, gCurrentMove, MOVE_ROOST, RoostEffect
 	attackanimation
 	waitanimation
 	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
@@ -745,11 +744,12 @@ BattleScript_EffectRestoreHp: @ 81D73D1
 	datahpupdate USER
 	printstring BATTLE_TEXT_RegainedHealth
 	waitmessage 64
+	jumpifhalfword EQUAL, gCurrentMove, MOVE_ROOST, RoostEffect
 	goto BattleScript_MoveEnd
 	
 RoostEffect:
 	setstatus3 USER, STATUS3_ROOST
-	return
+	goto BattleScript_MoveEnd
 
 BattleScript_EffectToxic: @ 81D73F4
 	attackcanceler
