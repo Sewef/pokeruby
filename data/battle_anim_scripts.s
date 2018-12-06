@@ -10277,12 +10277,56 @@ Move_DRAGON_RUSH:
 	
 Move_IRON_HEAD:
 Move_ZEN_HEADBUTT:
+	end
 
 Move_ROOST:
+	loadspritegfx ANIM_TAG_WHITE_FEATHER
+	monbg ANIM_BANK_DEF_PARTNER
+	monbgprio_29
+	playsewithpan SE_W080, SOUND_PAN_TARGET
+	delay 0
+	createsprite gBattleAnimSpriteTemplate_83DA498, 128, 0, -16, 64, 2, 104, 11304, 32, 1
+	delay 6
+	createsprite gBattleAnimSpriteTemplate_83DA498, 128, 0, -16, 32, 2, 104, 11304, 32, 1
+	createsprite gBattleAnimSpriteTemplate_83DA498, 128, 0, -16, 0, 2, 104, 11304, 32, 1
+	delay 6
+	createsprite gBattleAnimSpriteTemplate_83DA498, 128, 0, -16, 224, 2, 104, 11304, 32, 1
+	createsprite gBattleAnimSpriteTemplate_83DA498, 128, 0, -16, 128, 2, 104, 11304, 32, 1
+	delay 6
+	createsprite gBattleAnimSpriteTemplate_83DA498, 128, 0, -16, 192, 2, 104, 11304, 32, 1
+	createsprite gBattleAnimSpriteTemplate_83DA498, 128, 0, -16, 160, 2, 104, 11304, 32, 1
+	delay 6
+	createsprite gBattleAnimSpriteTemplate_83DA498, 128, 0, -16, 96, 2, 104, 11304, 32, 1
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_DEF_PARTNER
+	end
 
 Move_THUNDER_FANG:
 Move_FIRE_FANG:
+	loadspritegfx ANIM_TAG_SHARP_TEETH
+	loadspritegfx ANIM_TAG_IMPACT
+	loadspritegfx ANIM_TAG_SMALL_EMBER
+	monbg ANIM_BANK_TARGET
+	setalpha 12, 8
+	playsewithpan SE_W044, SOUND_PAN_TARGET
+	createsprite gBattleAnimSpriteTemplate_83DB1D0, 2, 0, -32, 0, 0, 819, 10
+	createsprite gBattleAnimSpriteTemplate_83DB1D0, 2, 0, 32, 4, 0, -819, 10
+	delay 10
+	createsprite gBasicHitSplatSpriteTemplate, 2, 0, 0, 1, 2
+	createvisualtask AnimTask_ShakeMon, 5, 1, 0, 4, 7, 1
+	
+	playsewithpan SE_W007, SOUND_PAN_TARGET
+	createsprite gBattleAnimSpriteTemplate_83DB3DC, 2, 31, 3, 1, 0, 8, 0, 0
+	call _81D11A2
+	
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_TARGET
+	blendoff
+	delay 1
+	end
+	
 Move_ICE_FANG:
+	end
 
 Move_KNOCK_OFF: @ 81D523B
 	loadspritegfx ANIM_TAG_SLAM_HIT_2

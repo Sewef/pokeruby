@@ -4617,6 +4617,7 @@ const struct BattleMove gBattleMoves[] = {
         .flags = F_MOVE_IS_STATUS | F_AFFECTED_BY_SNATCH,
     },
 	
+	//FANGS
     [MOVE_THUNDER_FANG] = {
         .effect = EFFECT_FLINCH_HIT,
         .power = 65,
