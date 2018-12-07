@@ -10310,6 +10310,27 @@ Move_ROOST:
 	end
 
 Move_THUNDER_FANG:
+	loadspritegfx ANIM_TAG_SHARP_TEETH
+	loadspritegfx ANIM_TAG_IMPACT
+	loadspritegfx ANIM_TAG_SPARK_2
+	
+	monbg ANIM_BANK_TARGET
+	setalpha 12, 8
+	playsewithpan SE_W044, SOUND_PAN_TARGET
+	createsprite gBattleAnimSpriteTemplate_83DB1D0, 2, 0, -32, 0, 0, 819, 10
+	createsprite gBattleAnimSpriteTemplate_83DB1D0, 2, 0, 32, 4, 0, -819, 10
+	delay 10
+	createsprite gBasicHitSplatSpriteTemplate, 2, 0, 0, 1, 2
+	createvisualtask AnimTask_ShakeMon, 5, 1, 0, 4, 7, 1
+	
+	call ElectricityEffect
+	
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_TARGET
+	blendoff
+	delay 1
+	end
+	
 Move_FIRE_FANG:
 	loadspritegfx ANIM_TAG_SHARP_TEETH
 	loadspritegfx ANIM_TAG_IMPACT
@@ -10334,7 +10355,43 @@ Move_FIRE_FANG:
 	end
 	
 Move_ICE_FANG:
+	loadspritegfx ANIM_TAG_SHARP_TEETH
+	loadspritegfx ANIM_TAG_IMPACT
+	
+	loadspritegfx ANIM_TAG_ICE_CHUNK
+	loadspritegfx ANIM_TAG_ICE_CRYSTALS
+	
+	monbg ANIM_BANK_TARGET
+	setalpha 12, 8
+	playsewithpan SE_W044, SOUND_PAN_TARGET
+	createsprite gBattleAnimSpriteTemplate_83DB1D0, 2, 0, -32, 0, 0, 819, 10
+	createsprite gBattleAnimSpriteTemplate_83DB1D0, 2, 0, 32, 4, 0, -819, 10
+	delay 10
+	createsprite gBasicHitSplatSpriteTemplate, 2, 0, 0, 1, 2
+	createvisualtask AnimTask_ShakeMon, 5, 1, 0, 4, 7, 1
+	
+	playsewithpan SE_W280, SOUND_PAN_TARGET
+	call IceFangParticle
+	call IceFangParticle
+	call IceFangParticle
+	call IceFangParticle
+	call IceFangParticle
+	call IceFangParticle
+	call IceFangParticle
+	call IceFangParticle
+	call IceFangParticle
+	call IceFangParticle
+	call IceFangParticle
+	
+	waitforvisualfinish
+	clearmonbg ANIM_BANK_TARGET
+	blendoff
+	delay 1
 	end
+	
+IceFangParticle:
+	createsprite gIceBallParticleSpriteTemplate, 132, 0, 0
+	return
 
 Move_KNOCK_OFF: @ 81D523B
 	loadspritegfx ANIM_TAG_SLAM_HIT_2
