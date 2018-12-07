@@ -2692,7 +2692,8 @@ BattleScript_EffectDoubleEdge: @ 81D891E
 VoltTackleEffect:
 	setmoveeffect EFFECT_PARALYSIS
 	seteffectwithchance
-	return
+	setmoveeffect EFFECT_RECOIL_33_PARALYSIS | AFFECTS_USER | CERTAIN
+	goto BattleScript_EffectHit
 
 BattleScript_EffectTeeterDance: @ 81D8929
 	attackcanceler
