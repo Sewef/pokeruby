@@ -9570,6 +9570,7 @@ Move_DRAGON_PULSE:
 	delay 10
 	createsprite gSlideMonToOriginalPosSpriteTemplate, 2, 0, 0, 4
 	
+	loopsewithpan SE_W172B, SOUND_PAN_TARGET, 11, 3	
 	createsprite gBattleAnimSpriteTemplate_83DB078, 194, 1, 5, 0
 	delay 1
 	createsprite gBattleAnimSpriteTemplate_83DB078, 194, 1, -10, -15
@@ -10143,13 +10144,10 @@ Move_ROAR_OF_TIME:
 	end
 	
 Move_ROCK_WRECKER:
-	loadspritegfx ANIM_TAG_FOCUS_ENERGY 
 	loadspritegfx ANIM_TAG_ROCKS 
 	loadspritegfx ANIM_TAG_IMPACT 
-	createvisualtask AnimTask_BlendSpriteColor, 5, ANIM_TAG_FOCUS_ENERGY , 0, 6, 8, rgb(25, 16, 8)
-	
+
 	playsewithpan SE_W082, 192
-	call EndureFlamesAnim
 	delay 8
 	createvisualtask AnimTask_ShakeMon2, 2, ANIM_BANK_ATTACKER, 1, 0, 32, 1
 	
@@ -10167,31 +10165,17 @@ Move_ROCK_WRECKER:
 	delay 10
 	createsprite gAncientPowerRockSpriteTemplate, 2, 0, 32, -42, 25, 5
 	createsprite gAncientPowerRockSpriteTemplate, 2, -25, 32, -48, 30, 4
-	
-	call EndureFlamesAnim
-	delay 8
-	call EndureFlamesAnim
 	waitforvisualfinish
 	
 	createsprite gHorizontalLungeSpriteTemplate, 2, 4, 6
 	delay 3
+	createsprite gBattleAnimSpriteTemplate_83DADE8, 130, 16, 0, 0, 0, 15, 257
+	delay 13
 	playsewithpan SE_W207, 192
-	createsprite gBattleAnimSpriteTemplate_83DADE8, 130, 16, 0, 0, 8, 10, 257
-	delay 1
-	createsprite gBattleAnimSpriteTemplate_83DADE8, 130, 16, 0, 0, 8, 10, 257
-	delay 1
-	createsprite gBattleAnimSpriteTemplate_83DADE8, 130, 16, 0, 0, 8, 10, 257
-	delay 1
-	createsprite gBattleAnimSpriteTemplate_83DADE8, 130, 16, 0, 0, 8, 10, 257
-	delay 1
-	createsprite gBattleAnimSpriteTemplate_83DADE8, 130, 16, 0, 0, 8, 10, 257
-	delay 1
 	createvisualtask AnimTask_ShakeMon, 2, ANIM_BANK_TARGET, 3, 0, 10, 1
-	
 	createsprite gBasicHitSplatSpriteTemplate, 131, 0, 0, 1, 1
 	playsewithpan SE_W088, 63
 	createsprite gBattleAnimSpriteTemplate_83DAC64, 130, 0, 0, 20, 24, 14, 2
-	
 	createsprite gBattleAnimSpriteTemplate_83DAC64, 130, 5, 0, -20, 24, 14, 1
 	createsprite gBattleAnimSpriteTemplate_83DAC64, 130, 0, 5, 20, -24, 14, 2
 	createsprite gBattleAnimSpriteTemplate_83DAC64, 130, -5, 0, -20, -24, 14, 2
