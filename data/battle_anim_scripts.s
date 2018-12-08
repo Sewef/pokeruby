@@ -9594,8 +9594,8 @@ Move_DRAGON_PULSE:
 Move_POWER_GEM:
 	loadspritegfx ANIM_TAG_RAINBOW_RINGS 
 	loadspritegfx ANIM_TAG_SPARKLE_2
-	createvisualtask AnimTask_BlendSpriteColor, 5, ANIM_TAG_SPARKLE_2, 0, 6, 12, 32667
-	createvisualtask AnimTask_BlendSpriteColor, 5, ANIM_TAG_RAINBOW_RINGS , 0, 6, 16, 32667
+	createvisualtask AnimTask_BlendSpriteColor, 5, ANIM_TAG_SPARKLE_2, 0, 6, 12, rgb(31,31,31)
+	createvisualtask AnimTask_BlendSpriteColor, 5, ANIM_TAG_RAINBOW_RINGS , 0, 6, 16, rgb(31,31,31)
 	createvisualtask sub_80E2A38, 10, 1, 0, 0, 6, 0
 	waitforvisualfinish
 	delay 8
@@ -10193,38 +10193,60 @@ Move_AIR_SLASH:
 	end
 	
 Move_DARK_PULSE:
-	loadspritegfx ANIM_TAG_THIN_RING 
-	loadspritegfx ANIM_TAG_BLACK_SMOKE 
 	loadspritegfx ANIM_TAG_IMPACT
 	loadspritegfx ANIM_TAG_BLACK_BALL 
-	createvisualtask AnimTask_BlendSpriteColor, 5, 10203, 0, 6, 16, rgb(0, 0, 0)
+	loadspritegfx ANIM_TAG_RED_ORB
+	createvisualtask AnimTask_BlendSpriteColor, 5, ANIM_TAG_RED_ORB, 0, 6, 10, rgb(0, 0, 0)
 	
-	fadetobg 00
+	fadetobg BG_DARK
 	waitbgfadeout
 	waitbgfadein
-
-	playsewithpan SE_W104, 192
-	createsprite gBattleAnimSpriteTemplate_83D7974, 16, 0, 0, 0, 1
-	waitforvisualfinish
 	
-	playsewithpan SE_W003, 63
+	createvisualtask sub_80E1F8C, 2, 2, 0, 2, 0, 10, rgb(0, 0, 0)
+	waitforvisualfinish
+
+	playsewithpan SE_W043, SOUND_PAN_ATTACKER
+	
+	createsprite gHiddenPowerOrbScatterSpriteTemplate, 130, 0
+	createsprite gHiddenPowerOrbScatterSpriteTemplate, 130, 8
+	createsprite gHiddenPowerOrbScatterSpriteTemplate, 130, 16
+	createsprite gHiddenPowerOrbScatterSpriteTemplate, 130, 24
+	createsprite gHiddenPowerOrbScatterSpriteTemplate, 130, 32
+	createsprite gHiddenPowerOrbScatterSpriteTemplate, 130, 40
+	createsprite gHiddenPowerOrbScatterSpriteTemplate, 130, 48
+	createsprite gHiddenPowerOrbScatterSpriteTemplate, 130, 56
+	createsprite gHiddenPowerOrbScatterSpriteTemplate, 130, 64
+	createsprite gHiddenPowerOrbScatterSpriteTemplate, 130, 72
+	createsprite gHiddenPowerOrbScatterSpriteTemplate, 130, 80
+	createsprite gHiddenPowerOrbScatterSpriteTemplate, 130, 88
+	createsprite gHiddenPowerOrbScatterSpriteTemplate, 130, 96
+	createsprite gHiddenPowerOrbScatterSpriteTemplate, 130, 104
+	createsprite gHiddenPowerOrbScatterSpriteTemplate, 130, 112
+	createsprite gHiddenPowerOrbScatterSpriteTemplate, 130, 120
+	createsprite gHiddenPowerOrbScatterSpriteTemplate, 130, 128
+	createsprite gHiddenPowerOrbScatterSpriteTemplate, 130, 136
+	createsprite gHiddenPowerOrbScatterSpriteTemplate, 130, 144
+	createsprite gHiddenPowerOrbScatterSpriteTemplate, 130, 152
+	createsprite gHiddenPowerOrbScatterSpriteTemplate, 130, 160
+	createsprite gHiddenPowerOrbScatterSpriteTemplate, 130, 168
+	createsprite gHiddenPowerOrbScatterSpriteTemplate, 130, 176
+	createsprite gHiddenPowerOrbScatterSpriteTemplate, 130, 184
+	createsprite gHiddenPowerOrbScatterSpriteTemplate, 130, 192
+	createsprite gHiddenPowerOrbScatterSpriteTemplate, 130, 200
+	createsprite gHiddenPowerOrbScatterSpriteTemplate, 130, 208
+	createsprite gHiddenPowerOrbScatterSpriteTemplate, 130, 216
+	createsprite gHiddenPowerOrbScatterSpriteTemplate, 130, 224
+	createsprite gHiddenPowerOrbScatterSpriteTemplate, 130, 232
+	createsprite gHiddenPowerOrbScatterSpriteTemplate, 130, 240
+	
+	
+	delay 16
+	
 	createsprite gBasicHitSplatSpriteTemplate, 131, 0, 0, 1, 1
 	createvisualtask AnimTask_ShakeMon, 2, ANIM_BANK_TARGET, 2, 0, 10, 1
 	
-	createsprite gBattleAnimSpriteTemplate_8402198, 132, 0, -12, 104, 0, 75
-	createsprite gBattleAnimSpriteTemplate_8402198, 132, 0, -12, 72, 1, 75
-	createsprite gBattleAnimSpriteTemplate_8402198, 132, 0, -6, 56, 1, 75
-	createsprite gBattleAnimSpriteTemplate_8402198, 132, 0, -6, 88, 0, 75
-	createsprite gBattleAnimSpriteTemplate_8402198, 132, 0, 0, 56, 0, 75
-	createsprite gBattleAnimSpriteTemplate_8402198, 132, 0, 0, 88, 1, 75
-	createsprite gBattleAnimSpriteTemplate_8402198, 132, 0, 6, 72, 0, 75
-	createsprite gBattleAnimSpriteTemplate_8402198, 132, 0, 6, 104, 1, 75
-	createsprite gBattleAnimSpriteTemplate_8402198, 132, 0, 12, 72, 0, 75
-	createsprite gBattleAnimSpriteTemplate_8402198, 132, 0, 12, 56, 1, 75
-	createsprite gBattleAnimSpriteTemplate_8402198, 132, 0, 18, 80, 0, 75
-	createsprite gBattleAnimSpriteTemplate_8402198, 132, 0, 18, 72, 1, 75
-	waitforvisualfinish	
-
+	waitforvisualfinish
+	
 	restorebg
 	waitbgfadeout	
 	waitbgfadein
