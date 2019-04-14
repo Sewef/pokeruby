@@ -25,6 +25,7 @@ PREPROC   := tools/preproc/preproc$(EXE)
 SCANINC   := tools/scaninc/scaninc$(EXE)
 RAMSCRGEN := tools/ramscrgen/ramscrgen$(EXE)
 GBAFIX    := tools/gbafix/gbafix$(EXE)
+MAPJSON   := tools/mapjson/mapjson$(EXE)
 
 ASFLAGS  := -mcpu=arm7tdmi -I include --defsym $(GAME_VERSION)=1 --defsym REVISION=$(GAME_REVISION) --defsym $(GAME_LANGUAGE)=1 --defsym DEBUG=$(DEBUG)
 CC1FLAGS := -mthumb-interwork -Wimplicit -Wparentheses -Wunused -Werror -O2 -fhex-asm
@@ -57,10 +58,9 @@ LD_SCRIPT := $(BUILD_DIR)/ld_script.ld
 %src/libs/agb_flash.o:    CC1FLAGS := -O1 -mthumb-interwork
 %src/libs/agb_flash_1m.o: CC1FLAGS := -O1 -mthumb-interwork
 %src/libs/agb_flash_mx.o: CC1FLAGS := -O1 -mthumb-interwork
-%src/libs/m4a_2.o: CC1 := tools/agbcc/bin/old_agbcc$(EXE)
-%src/libs/m4a_4.o: CC1 := tools/agbcc/bin/old_agbcc$(EXE)
-%src/libs/libisagbprn.o: CC1 := tools/agbcc/bin/old_agbcc$(EXE)
-%src/libs/libisagbprn.o: CC1FLAGS := -mthumb-interwork
+%src/libs/m4a.o:          CC1 := tools/agbcc/bin/old_agbcc$(EXE)
+%src/libs/libisagbprn.o:  CC1 := tools/agbcc/bin/old_agbcc$(EXE)
+%src/libs/libisagbprn.o:  CC1FLAGS := -mthumb-interwork
 
 
 #### Main Rules ####
@@ -110,6 +110,9 @@ clean: tidy
 	find sound/direct_sound_samples \( -iname '*.bin' \) -exec rm {} +
 	$(RM) $(ALL_OBJECTS)
 	find . \( -iname '*.1bpp' -o -iname '*.4bpp' -o -iname '*.8bpp' -o -iname '*.gbapal' -o -iname '*.lz' -o -iname '*.rl' \) -exec rm {} +
+	rm -f data/layouts/layouts.inc data/layouts/layouts_table.inc
+	rm -f data/maps/connections.inc data/maps/events.inc data/maps/groups.inc data/maps/headers.inc
+	find data/maps \( -iname 'connections.inc' -o -iname 'events.inc' -o -iname 'header.inc' \) -exec rm {} +
 	$(MAKE) clean -C tools/gbagfx
 	$(MAKE) clean -C tools/scaninc
 	$(MAKE) clean -C tools/preproc
@@ -118,6 +121,7 @@ clean: tidy
 	$(MAKE) clean -C tools/aif2pcm
 	$(MAKE) clean -C tools/ramscrgen
 	$(MAKE) clean -C tools/gbafix
+	$(MAKE) clean -C tools/mapjson
 
 tools:
 	@$(MAKE) -C tools/gbagfx
@@ -129,6 +133,7 @@ tools:
 	@$(MAKE) -C tools/ramscrgen
 	@$(MAKE) -C tools/mid2agb
 	@$(MAKE) -C tools/gbafix
+	@$(MAKE) -C tools/mapjson
 
 tidy:
 	$(RM) $(ALL_BUILDS:%=poke%{.gba,.elf,.map})
@@ -181,6 +186,7 @@ include fonts.mk
 include misc.mk
 include spritesheet_rules.mk
 include override.mk
+include map_data_rules.mk
 
 %.1bpp:   %.png ; $(GBAGFX) $< $@ $(GFX_OPTS)
 %.4bpp:   %.png ; $(GBAGFX) $< $@ $(GFX_OPTS)
